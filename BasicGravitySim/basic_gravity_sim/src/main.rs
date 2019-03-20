@@ -193,8 +193,8 @@ fn main() {
             particle.physics(&dt, &-a);
 
             let duration_frame = std::time::SystemTime::now().duration_since(last_frame).unwrap();
-            if  (duration_frame.as_secs() as f64 + duration_frame.subsec_nanos() as f64 * 1e-9) as f32
-                >= 0.010f32
+            if  (particle.vel.y != 0.0f32 && particle.pos.y != 0.0f32) && (duration_frame.as_secs() as f64 + duration_frame.subsec_nanos() as f64 * 1e-9) as f32
+                >= 0.030f32
             {
 
                 println!("{},\t{}", total_dt, particle);
