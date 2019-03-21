@@ -64,7 +64,7 @@ impl std::ops::Mul for &Vec2 {
 
 impl std::fmt::Display for Vec2 {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(fmt, "[{:.5}, {:.5}]", self.x, self.y)
+        write!(fmt, "[{x:<12.5}, {y:<12.5}]", x= self.x, y=self.y)
     }
 }
 
